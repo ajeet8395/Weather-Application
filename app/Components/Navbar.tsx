@@ -12,7 +12,7 @@ function Navbar() {
   const router = useRouter();
   const { state } = useGlobalContext();
   const handleClick = () => {
-    router.push("https://github.com/ajeet8395/Weather-Application");
+    // router.push("https://github.com/ajeet8395/Weather-Application");
   };
 
   return (
