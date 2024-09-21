@@ -30,7 +30,7 @@ export default function Home() {
   };
 
   return (
-    <main className="mx-[1rem] lg:mx-[2rem] xl:mx-[6rem] 2xl:mx-[16rem] m-auto">
+    <main className="mx-[1rem] lg:mx-[2rem] xl:mx-[6rem] 2xl:mx-[12rem] m-auto">
       <Navbar />
       <div className="pb-4 flex flex-col gap-4 md:flex-row">
         <div className="flex flex-col gap-4 w-full min-w-[18rem] md:w-[35rem]">
@@ -61,7 +61,7 @@ export default function Home() {
                   return (
                     <div
                       key={index}
-                      className="border rounded-lg cursor-pointer dark:bg-dark-grey shadow-sm dark:shadow-none"
+                      className="border rounded-lg cursor-pointer dark:bg-dark-grey shadow-sm dark:shadow-none hover:border-green-300 duration-300 cursor-pointer"
                       onClick={() => {
                         getClickedCityCords(state.lat, state.lon);
                       }}
@@ -79,13 +79,13 @@ export default function Home() {
       <footer className="py-4 flex justify-center pb-8">
         <p className="footer-text text-sm flex items-center gap-1">
           Made by
-          <Image src={"/logo-white.svg"} alt="logo" width={20} height={20} />
+          <Image src={"/port.gif"} alt="logo" width={60} height={60}/>
           <a
-            href="https://thecodedealer.com"
+            href="https://ajeet.vercel.app/"
             target="_blank"
             className=" text-green-300 font-bold"
           >
-            TheCodeDealer
+            Ajeet Singh
           </a>
         </p>
       </footer>
