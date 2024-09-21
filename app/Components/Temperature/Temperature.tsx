@@ -69,8 +69,11 @@ function Temperature() {
   return (
     <div
       className="pt-6 pb-5 px-4 border rounded-lg flex flex-col 
-        justify-between dark:bg-dark-grey shadow-sm dark:shadow-none"
+        justify-between dark:bg-dark-grey shadow-sm dark:shadow-none hover:border-green-300 duration-300 cursor-pointer"
     >
+      <div className="hover-effect">
+      Hover me
+    </div>
       <p className="flex justify-between items-center">
         <span className="font-medium">{currentDay}</span>
         <span className="font-medium">{localTime}</span>

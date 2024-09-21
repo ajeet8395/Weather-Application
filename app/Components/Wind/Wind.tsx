@@ -18,7 +18,7 @@ function Wind() {
   return (
     <div
       className="pt-6 pb-5 px-4 h-[12rem] border rounded-lg flex 
-    flex-col gap-3 dark:bg-dark-grey shadow-sm dark:shadow-none"
+    flex-col gap-3 dark:bg-dark-grey shadow-sm dark:shadow-none hover:border-green-300 duration-300 cursor-pointer"
     >
       <h2 className="flex items-center gap-2 font-medium">{wind} Wind</h2>
 

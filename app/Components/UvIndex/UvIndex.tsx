@@ -55,7 +55,7 @@ function UvIndex() {
   const marginLeftPercentage = (uvIndexMax / 14) * 100;
 
   return (
-    <div className="pt-6 pb-5 px-4 h-[12rem] border rounded-lg flex flex-col gap-5 dark:bg-dark-grey shadow-sm dark:shadow-none">
+    <div className="pt-6 pb-5 px-4 h-[12rem] border rounded-lg flex flex-col gap-5 dark:bg-dark-grey shadow-sm dark:shadow-none hover:border-green-300 duration-300 cursor-pointer">
       <div className="top">
         <h2 className="flex items-center gap-2 font-medium">{sun} Uv Index</h2>
         <div className="pt-4 flex flex-col gap-1">
