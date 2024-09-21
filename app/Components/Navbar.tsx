@@ -23,7 +23,9 @@ function Navbar() {
           <Button
             className="source-code-btn flex items-center gap-2"
             onClick={() => {
-              window.open("https://github.com/ajeet8395/Weather-Application");
+              if (typeof window !== "undefined") {
+                window.open("https://github.com/ajeet8395/Weather-Application");
+              }
             }}
           >
             {github} Source Code
