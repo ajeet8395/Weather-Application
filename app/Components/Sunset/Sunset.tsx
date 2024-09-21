@@ -12,7 +12,7 @@ function Sunset() {
     return <Skeleton className="h-[12rem] w-full" />;
   }
 
-  const times = forecast?.sys?.sunset;
+  const times = forecast?.sys?.sunset; // "?." If forecast is null or undefined, it will prevent errors and return undefined instead of throwing an error. 
   const timezone = forecast?.timezone;
 
   const sunsetTime = unixToTime(times, timezone);

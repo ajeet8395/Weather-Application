@@ -1,14 +1,13 @@
 import moment from "moment";
 
+// kelvin to celsius convertor
 export const kelvinToCelsius = (kelvin: number) => {
   return Math.round(kelvin - 273.15);
 };
 
+// Time
 export const unixToTime = (unix: number, timezone: number) => {
-  return moment
-    .unix(unix)
-    .utcOffset(timezone / 60)
-    .format("HH:mm");
+  return moment.unix(unix).utcOffset(timezone / 60).format("HH:mm");
 };
 
 export const unixToDay = (unix: number) => {
@@ -25,6 +24,7 @@ export const formatNumber = (num: number) => {
   }
 };
 
+// Air Quality Index
 export const airQulaityIndexText = [
   {
     rating: 10,
