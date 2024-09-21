@@ -61,7 +61,7 @@ export default function Home() {
                   return (
                     <div
                       key={index}
-                      className="border rounded-lg cursor-pointer dark:bg-dark-grey shadow-sm dark:shadow-none hover:border-green-300 duration-300 cursor-pointer"
+                      className="border rounded-lg dark:bg-dark-grey shadow-sm dark:shadow-none hover:border-green-300 duration-300 cursor-pointer"
                       onClick={() => {
                         getClickedCityCords(state.lat, state.lon);
                       }}
