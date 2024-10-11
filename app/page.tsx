@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import AirPollution from "./Components/AirPollution/AirPollution";
 import DailyForecast from "./Components/DailyForecast/DailyForecast";
@@ -19,17 +20,25 @@ import { useGlobalContextUpdate } from "./context/globalContext";
 
 export default function Home() {
   const { setActiveCityCoords } = useGlobalContextUpdate();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const getClickedCityCords = (lat: number, lon: number) => {
     setActiveCityCoords([lat, lon]);
-    // Uncomment the following if you want to implement smooth scrolling
-    // if (typeof window !== 'undefined') {
-    //   window.scrollTo({
-    //     top: 0,
-    //     behavior: "smooth",
-    //   });
-    // }
+    if (isMounted) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
+
+  if (!isMounted) {
+    return null; // or a loading spinner
+  }
 
   return (
     <main className="mx-[1rem] lg:mx-[2rem] xl:mx-[6rem] 2xl:mx-[12rem] m-auto">
