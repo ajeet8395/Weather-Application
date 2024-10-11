@@ -22,11 +22,13 @@ export default function Home() {
 
   const getClickedCityCords = (lat: number, lon: number) => {
     setActiveCityCoords([lat, lon]);
-
-    // window.scrollTo({
-    //   top: 0,
-    //   behavior: "smooth",
-    // });
+    // Uncomment the following if you want to implement smooth scrolling
+    // if (typeof window !== 'undefined') {
+    //   window.scrollTo({
+    //     top: 0,
+    //     behavior: "smooth",
+    //   });
+    // }
   };
 
   return (
@@ -83,7 +85,7 @@ export default function Home() {
           <a
             href="https://ajeet.vercel.app/"
             target="_blank"
-            className=" text-green-300 font-bold"
+            className="text-green-300 font-bold"
           >
             Ajeet Singh
           </a>
