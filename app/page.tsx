@@ -28,7 +28,7 @@ export default function Home() {
 
   const getClickedCityCords = (lat: number, lon: number) => {
     setActiveCityCoords([lat, lon]);
-    if (isMounted) {
+    if (typeof window !== 'undefined' && isMounted) {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -36,7 +36,7 @@ export default function Home() {
     }
   };
 
-  if (!isMounted) {
+  if (typeof window === 'undefined' || !isMounted) {
     return null; // or a loading spinner
   }
 
