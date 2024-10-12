@@ -18,7 +18,7 @@ import defaultStates from "./utils/defaultStates";
 import FiveDayForecast from "./Components/FiveDayForecast/FiveDayForecast";
 import { useGlobalContextUpdate } from "./context/globalContext";
 
-export default function Home() {
+const ClientSideContent = () => {
   const { setActiveCityCoords } = useGlobalContextUpdate();
   const [isMounted, setIsMounted] = useState(false);
 
@@ -28,14 +28,10 @@ export default function Home() {
 
   const getClickedCityCords = (lat: number, lon: number) => {
     setActiveCityCoords([lat, lon]);
-
-    if (typeof window !== 'undefined' && isMounted) {
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
 
@@ -44,7 +40,7 @@ export default function Home() {
   }
 
   return (
-    <main className="mx-[1rem] lg:mx-[2rem] xl:mx-[6rem] 2xl:mx-[12rem] m-auto">
+    <>
       <Navbar />
       <div className="pb-4 flex flex-col gap-4 md:flex-row">
         <div className="flex flex-col gap-4 w-full min-w-[18rem] md:w-[35rem]">
@@ -103,6 +99,24 @@ export default function Home() {
           </a>
         </p>
       </footer>
+    </>
+  );
+};
+
+export default function Home() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // or a loading spinner
+  }
+
+  return (
+    <main className="mx-[1rem] lg:mx-[2rem] xl:mx-[6rem] 2xl:mx-[12rem] m-auto">
+      <ClientSideContent />
     </main>
   );
 }
