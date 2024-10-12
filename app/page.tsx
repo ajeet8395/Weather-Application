@@ -28,13 +28,16 @@ export default function Home() {
 
   const getClickedCityCords = (lat: number, lon: number) => {
     setActiveCityCoords([lat, lon]);
+
     if (typeof window !== 'undefined' && isMounted) {
+
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
     }
   };
+
 
   if (typeof window === 'undefined' || !isMounted) {
     return null; // or a loading spinner
