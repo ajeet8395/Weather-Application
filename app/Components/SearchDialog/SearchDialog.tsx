@@ -64,7 +64,7 @@ function SearchDialog() {
                       <li
                         key={index}
                         onMouseEnter={() => setHoveredIndex(index)}
-                        className={`py-3 px-2 text-sm  rounded-sm cursor-default
+                        className={`py-3 px-2 text-sm  rounded-sm cursor-pointer
                         ${hoveredIndex === index ? "bg-accent" : ""}
                       `}
                         onClick={() => {

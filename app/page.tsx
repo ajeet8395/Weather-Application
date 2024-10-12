@@ -20,6 +20,11 @@ import { useGlobalContextUpdate } from "./context/globalContext";
 
 const ClientSideContent = () => {
   const { setActiveCityCoords } = useGlobalContextUpdate();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const getClickedCityCords = (lat: number, lon: number) => {
     setActiveCityCoords([lat, lon]);
@@ -28,6 +33,11 @@ const ClientSideContent = () => {
       behavior: "smooth",
     });
   };
+
+
+  if (typeof window === 'undefined' || !isMounted) {
+    return null; // or a loading spinner
+  }
 
   return (
     <>

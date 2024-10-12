@@ -63,7 +63,7 @@ function DailyForecast() {
   return (
     <div
       className="pt-6 px-4 h-[12rem] border rounded-lg flex flex-col gap-8
-       dark:bg-dark-grey shadow-sm dark:shadow-none col-span-full sm-2:col-span-2 md:col-span-2 xl:col-span-2"
+       dark:bg-dark-grey shadow-sm dark:shadow-none col-span-full sm-2:col-span-2 md:col-span-2 xl:col-span-2 hover:border-green-300 duration-300 cursor-pointer"
     >
       <div className="h-full flex gap-10 overflow-hidden">
         {todaysForecast.length < 1 ? (
