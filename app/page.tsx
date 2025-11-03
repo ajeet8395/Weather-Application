@@ -85,7 +85,7 @@ export default function Home() {
           Made by
           <Image src={"/port.gif"} alt="logo" width={60} height={60}/>
           <a
-            href="https://ajeet.vercel.app/"
+            href="https://www.ajeetsingh.in/"
             target="_blank"
             className=" text-green-300 font-bold"
           >

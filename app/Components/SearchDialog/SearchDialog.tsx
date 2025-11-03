@@ -14,13 +14,15 @@ function SearchDialog() {
   const { setActiveCityCoords } = useGlobalContextUpdate();
 
   const [hoveredIndex, setHoveredIndex] = React.useState<number>(0);
+  const [open, setOpen] = React.useState<boolean>(false);
 
   const getClickedCoords = (lat: number, lon: number) => {
     setActiveCityCoords([lat, lon]);
+    setOpen(false);
   };
   return (
     <div className="search-btn">
-      <Dialog>
+      <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <Button
             variant="outline"
