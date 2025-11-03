@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌦️ Modern Weather Dashboard
 
-## Getting Started
+A sleek, dark-themed **Weather Dashboard Application** built with **Next.js**, **Tailwind CSS**, and **OpenWeather API**.  
+It displays **real-time weather updates**, **air quality**, **UV index**, and **5-day forecasts** for any city in a modern and interactive interface.
 
-First, run the development server:
+---
 
+## 📸 Preview
+
+![Weather Dashboard Preview](./public/weatherM.png)
+
+---
+
+## 🌍 Features
+
+- 🌡️ **Real-Time Temperature** with hourly updates  
+- 🌤️ **5-Day Forecast** for upcoming weather trends  
+- 🏙️ **City Search** – Get weather data for any location  
+- 💨 **Wind Speed & Direction Compass**  
+- ☁️ **Air Quality Index (AQI)** and **PM2.5** levels  
+- 🌇 **Sunrise & Sunset Timings**  
+- 🌞 **UV Index** Indicator  
+- 💧 **Humidity, Pressure, and Visibility Data**  
+- 📊 **Feels Like Temperature**  
+- 📱 **Responsive Design** for all screen sizes  
+- ⚡ **Fast and minimal UI** built with **Next.js + Tailwind CSS**
+
+---
+
+## 🧠 Tech Stack
+
+| Technology | Purpose |
+|-------------|----------|
+| **Next.js** | Framework for React-based UI |
+| **Tailwind CSS** | Styling and layout |
+| **OpenWeather API** | Weather & pollution data |
+| **Framer Motion** | Smooth animations |
+| **JavaScript (ES6+)** | Logic and interactivity |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 ```bash
+git clone https://github.com/ajeet8395/Weather-Application.git
+cd weather-app
+2. Install Dependencies
+bash
+Copy code
+npm install
+3. Create .env.local File
+Add your OpenWeather API Key:
+
+env
+Copy code
+NEXT_PUBLIC_WEATHER_API_KEY=your_api_key_here
+4. Run the Development Server
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Now open http://localhost:3000 in your browser 🌐
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+⚙️ API Used
+OpenWeather API – for real-time weather, air pollution, and forecast data.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📁 Folder Structure
+pgsql
+Copy code
+weather-app/
+├── components/
+│   ├── WeatherCard.jsx
+│   ├── ForecastCard.jsx
+│   └── AirQuality.jsx
+├── pages/
+│   ├── index.tsx
+│   └── api/
+├── public/
+│   └── icons/
+├── styles/
+│   └── globals.css
+└── .env.local
+🧾 License
+This project is licensed under the MIT License – you’re free to use, modify, and distribute it.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+💖 Acknowledgements
+OpenWeather
 
-## Learn More
+Tailwind CSS
 
-To learn more about Next.js, take a look at the following resources:
+Next.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+👨‍💻 Author
+Ajeet Singh
+🌐 Portfolio
+💼 LinkedIn
