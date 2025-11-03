@@ -68,9 +68,8 @@ Now open http://localhost:3000 in your browser 🌐
 ⚙️ API Used
 OpenWeather API – for real-time weather, air pollution, and forecast data.
 
-📁 Folder Structure
-pgsql
-Copy code
+### 📁 Folder Structure
+```bash
 weather-app/
 ├── components/
 │   ├── WeatherCard.jsx
@@ -84,6 +83,7 @@ weather-app/
 ├── styles/
 │   └── globals.css
 └── .env.local
+```
 🧾 License
 This project is licensed under the MIT License – you’re free to use, modify, and distribute it.
 
