@@ -89,12 +89,10 @@ This project is licensed under the MIT License – you’re free to use, modify,
 
 💖 Acknowledgements
 OpenWeather
-
 Tailwind CSS
-
 Next.js
 
 👨‍💻 Author
 Ajeet Singh
-🌐 Portfolio
-💼 LinkedIn
+🌐 [Portfolio](https://www.ajeetsingh.in/)
+💼 [LinkedIn](https://www.linkedin.com/in/ajeetsingh83/)
