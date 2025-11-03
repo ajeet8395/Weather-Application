@@ -45,20 +45,24 @@ It displays **real-time weather updates**, **air quality**, **UV index**, and **
 ```bash
 git clone https://github.com/ajeet8395/Weather-Application.git
 cd weather-app
-2. Install Dependencies
-bash
-Copy code
+```
+
+### 2. Install Dependencies
+```bash
 npm install
-3. Create .env.local File
+```
+
+### 3. Create .env.local File
 Add your OpenWeather API Key:
 
-env
-Copy code
+```env
 NEXT_PUBLIC_WEATHER_API_KEY=your_api_key_here
-4. Run the Development Server
-bash
-Copy code
+```
+
+### 4. Run the Development Server
+```bash
 npm run dev
+```
 Now open http://localhost:3000 in your browser 🌐
 
 ⚙️ API Used
